@@ -17,12 +17,12 @@ func main() {
 	generateDict()
 }
 
-type Row struct {
+type row struct {
 	Name string `json:"Name"`
 	Sex  string `json:"Sex"`
 }
 
-type NamesDict []Row
+type namesDict []row
 
 func generateDict() {
 	f, err := ioutil.ReadFile("cmd/russian_names.json")
@@ -32,7 +32,7 @@ func generateDict() {
 
 	f = bytes.TrimPrefix(f, []byte("\xef\xbb\xbf")) // отпилить BOM
 
-	var rows NamesDict
+	var rows namesDict
 
 	err = json.Unmarshal(f, &rows)
 	if err != nil {
@@ -48,6 +48,7 @@ func generateDict() {
 
 	_, _ = fmt.Fprint(out, "// DO NOT EDIT!\n// Code generated from cmd/generator.go\n\npackage rules\n\n")
 
+	fmt.Fprint(out, "// AllNames presents dictionary of firstnames for fallback\n")
 	fmt.Fprint(out, "var AllNames = map[string]Gender{\n")
 
 	for _, row := range rows {
@@ -91,6 +92,7 @@ func generateRules() {
 
 	_, _ = fmt.Fprint(out, "// DO NOT EDIT!\n// Code generated from cmd/generator.go\n\npackage rules\n\n")
 
+	fmt.Fprint(out, "// AllRules presents all geenerated petrovich rules\n")
 	fmt.Fprint(out, "var AllRules = Rules{\n\tFirstname: RulesGroup{\n")
 	printRulesGroup(out, petrovich.Firstname)
 

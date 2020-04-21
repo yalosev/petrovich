@@ -34,13 +34,12 @@ func ExampleTransform() {
 
 	for _, p := range people {
 		fmt.Println(petrovich.Transform(p, petrovich.Dative))
-		// Output:
-		// Прокопенко Сергею Ивановичу
-		// Николаеву Андрею Павловичу
-		// Морозовой Екатерине Алексеевне
-		// Павловой Антонине Сергеевне
-
 	}
+	// Output:
+	// Прокопенко Сергею Ивановичу
+	// Николаеву Андрею Павловичу
+	// Морозовой Екатерине Алексеевне
+	// Павловой Антонине Сергеевне
 }
 
 func ExampleTransformShort() {
@@ -72,10 +71,10 @@ func ExampleTransformShort() {
 	for _, p := range people {
 		newp := petrovich.Transform(p, petrovich.Instrumental)
 		fmt.Println(newp.Short())
-		// Output:
-		// Прокопенко С.И.
-		// Николаевым А.П.
-		// Морозовой Е.А.
-		// Павловой А.С.
 	}
+	// Output:
+	// Прокопенко С.И.
+	// Николаевым А.П.
+	// Морозовой Е.А.
+	// Павловой А.С.
 }

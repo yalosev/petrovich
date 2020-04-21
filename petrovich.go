@@ -11,18 +11,22 @@ import (
 //go:generate git submodule update --recursive --remote
 //go:generate go run cmd/generator.go
 
-// Gender specify Person`s gender - Male, Female, Androgynous
+// Gender specifies Person`s gender - Male, Female, Androgynous
 type Gender = rules.Gender
 
-// Case grammatical case (падежи)
+// Case specifies grammatical case (падежи)
 type Case = rules.Case
 
 const (
+	// Androgynous gender
 	Androgynous = rules.Androgynous
-	Male        = rules.Male
-	Female      = rules.Female
+	// Male gender
+	Male = rules.Male
+	// Female gender
+	Female = rules.Female
 
-	// case
+	// cases
+
 	// Nominative именительный
 	Nominative = rules.Nominative
 	// Genitive родительный

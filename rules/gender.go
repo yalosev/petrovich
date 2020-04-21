@@ -6,7 +6,10 @@ package rules
 type Gender int8
 
 const (
+	// Androgynous gender
 	Androgynous Gender = iota
+	// Male gender
 	Male
+	// Female gender
 	Female
 )
