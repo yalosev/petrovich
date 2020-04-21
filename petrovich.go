@@ -102,7 +102,7 @@ func (p Person) Short() string {
 	return strings.TrimSpace(buf.String())
 }
 
-// Transform преобразовать ФИО в указанный падеж
+// Transform person credentials to a given grammatical case
 func Transform(person Person, cas rules.Case) Person {
 	if person.Gender == 0 && (len(person.MiddleName) > 0 || len(person.FirstName) > 0) {
 		person.Gender = person.detectGender()

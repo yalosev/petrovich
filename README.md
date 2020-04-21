@@ -1,4 +1,9 @@
-Go port of petrovich library(https://github.com/petrovich) which inflects Russian names to a given grammatical case
+![Petrovich](petrovich.png)
+
+Golang port of petrovich library(https://github.com/petrovich) which inflects Russian names to a given grammatical case
+
+[![GoDoc](https://godoc.org/github.com/yalosev/petrovich?status.svg)](https://godoc.org/github.com/yalosev/petrovich)
+[![Go Report Card](https://goreportcard.com/badge/github.com/yalosev/petrovich)](https://goreportcard.com/report/github.com/yalosev/petrovich)
 
 ## Installation
 ```
