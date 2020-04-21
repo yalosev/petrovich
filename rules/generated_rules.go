@@ -3,6 +3,7 @@
 
 package rules
 
+// AllRules presents all geenerated petrovich rules
 var AllRules = Rules{
 	Firstname: RulesGroup{
 		Exceptions: []Rule{

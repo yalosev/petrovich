@@ -3,6 +3,7 @@
 
 package rules
 
+// AllNames presents dictionary of firstnames for fallback
 var AllNames = map[string]Gender{
 	"аалия":            Female,
 	"аанжелла":         Female,
