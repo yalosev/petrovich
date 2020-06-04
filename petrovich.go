@@ -10,6 +10,7 @@ import (
 
 //go:generate git submodule update --recursive --remote
 //go:generate go run cmd/generator.go
+//go:generate go fmt ./...
 
 // Gender specifies Person`s gender - Male, Female, Androgynous
 type Gender = rules.Gender
